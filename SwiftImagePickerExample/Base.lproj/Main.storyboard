@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftImagePickerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZUp-zB-kTb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJK-U1-BEO">
+                                <rect key="frame" x="8" y="798" width="398" height="48"/>
+                                <color key="backgroundColor" white="0.2068974743150685" alpha="0.79810573630136983" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="bEb-0I-i0N"/>
+                                </constraints>
+                                <state key="normal" title="Pick Image photoLibrary">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapPickImagePhotoLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bW3-OH-Z9x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8j-ZO-sg3">
+                                <rect key="frame" x="8" y="734" width="398" height="48"/>
+                                <color key="backgroundColor" white="0.20689747429999999" alpha="0.79810573630000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eFF-rH-l8V"/>
+                                </constraints>
+                                <state key="normal" title="Pick Image savedPhotosAlbum ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapPickImageSavedPhotosAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pmc-Jk-UCE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oht-Q8-6eM">
+                                <rect key="frame" x="8" y="670" width="398" height="48"/>
+                                <color key="backgroundColor" white="0.20689747429999999" alpha="0.79810573630000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Gqb-aP-EhA"/>
+                                </constraints>
+                                <state key="normal" title="Pick Image camera ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapPickImageCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7q-6s-ZFK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oht-Q8-6eM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="0jh-Mw-OsD"/>
+                            <constraint firstItem="eJK-U1-BEO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" id="1lL-jM-4Sc"/>
+                            <constraint firstItem="ZUp-zB-kTb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="20r-WB-i1v"/>
+                            <constraint firstItem="g8j-ZO-sg3" firstAttribute="top" secondItem="oht-Q8-6eM" secondAttribute="bottom" constant="16" id="Ltu-M3-uLf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eJK-U1-BEO" secondAttribute="trailing" constant="8" id="ONg-Ja-WKT"/>
+                            <constraint firstItem="eJK-U1-BEO" firstAttribute="top" secondItem="g8j-ZO-sg3" secondAttribute="bottom" constant="16" id="Ooz-hA-n7h"/>
+                            <constraint firstItem="g8j-ZO-sg3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="P07-va-zRh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oht-Q8-6eM" secondAttribute="trailing" constant="8" id="Xrv-wS-nvn"/>
+                            <constraint firstItem="eJK-U1-BEO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Yiz-gE-MDO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eJK-U1-BEO" secondAttribute="bottom" constant="16" id="gaP-pQ-MSH"/>
+                            <constraint firstAttribute="trailing" secondItem="ZUp-zB-kTb" secondAttribute="trailing" id="gp1-5A-aGe"/>
+                            <constraint firstItem="ZUp-zB-kTb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="jtk-kF-Ab2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g8j-ZO-sg3" secondAttribute="trailing" constant="8" id="m1b-cp-84b"/>
+                            <constraint firstItem="ZUp-zB-kTb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mMe-sL-5e3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonPickImageCamera" destination="oht-Q8-6eM" id="SnZ-7u-OkX"/>
+                        <outlet property="imageView" destination="ZUp-zB-kTb" id="EUk-ej-duq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
